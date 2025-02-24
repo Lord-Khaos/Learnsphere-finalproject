@@ -1,12 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
-
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext"; 
 const Navbar = () => {
   const location = useLocation();
   const isCourseListPage = location.pathname.includes("/course-list");
 
   const { openSignIn } = useClerk();
   const { isSignedIn } = useUser(); // Check if the user is signed in
+  const {navigate,isEducation} = useContext(AppContext)
 
   return (
     <nav className={`navbar  border-bottom ${isCourseListPage} ? bg-light`}>
@@ -21,6 +23,7 @@ const Navbar = () => {
             height="24"
             className="d-inline-block align-text-top"
             style={{ marginRight: "10px", fontWeight: "bold" }}
+            onClick={() => navigate("/")}
           />
           Learnsphere
         </a>
@@ -34,7 +37,7 @@ const Navbar = () => {
           </Link>
           <span className="mx-2">|</span>
           <Link to="/educator" className="text-decoration-none text-dark mx-2">
-            Become Educator
+           {isEducation ? "Educator Dashboard" : "Become an Educator"}
           </Link>
                 </>
             }
