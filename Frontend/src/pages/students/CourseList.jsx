@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import CourseCard from "../../components/students/CourseCard"; // Import CourseCard
@@ -11,6 +11,7 @@ const CourseList = () => {
   const {allCourses,navigate} = useContext(AppContext)
   const {input} = useParams()
   const [filteredCourse,setFilteredCourse] = useState([])
+  
 
   useEffect(() => {
     if(allCourses && allCourses.length > 0) {
