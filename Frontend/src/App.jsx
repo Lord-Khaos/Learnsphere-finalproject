@@ -11,6 +11,9 @@ import AddCourse from "./pages/educator/AddCourse.jsx";
 import MyCourses from "./pages/educator/MyCourses.jsx";
 import StudentsEnrolled from "./pages/educator/StudentsEnrolled.jsx";
 import Navbar from "./components/students/Navbar.jsx";
+import Contact from "./pages/students/Contact.jsx";
+import FAQ from "./pages/students/FAQ.jsx";
+import About from "./pages/students/About.jsx";
 
 const App = () => {
 
@@ -26,8 +29,11 @@ const isEducatorRoute = location.pathname.includes('/educator')
       <Route path="/course-list/:input" element={<CourseList />} />
       <Route path="/course/:id" element={<CourseDetails />} />
       <Route path="/my-enrollments" element={<MyEnrollments />} />
-      <Route path="/player/:courseId" element={<Player />} />
+      <Route path="/player/:id" element={<Player />} />
       <Route path="/loading/:path" element={<Loading />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/about" element={<About />} />
 
       {/* Educator Nested Routes */}
       <Route path="/educator" element={<Educator />}>

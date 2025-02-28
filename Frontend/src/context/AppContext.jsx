@@ -15,6 +15,7 @@ const navigate = useNavigate()
 
 const [allCourses, setAllCourses] = useState([])
 const [isEducation, setIsEducation] = useState(true)
+const [enrolledCourse, setEnrolledCourse] = useState([])
 
 //Fetch all Courses
 const fetchAllCourses = async () => {
@@ -32,32 +33,38 @@ const calculateRating = (course)=>{
 
 const calculateChapterTime = (chapter) => {
     let totalTime = 0;
-    chapter.chapterContent.map((topic) => totalTime += topic.duration);
+    chapter.chapterContent.map((topic) => totalTime += topic.lessonduration);
     return humanizeDuration(totalTime*60*1000, {units: ['h', 'm'], round: true});
 }
 
 const calculateCourseDuration = (course) => {
     let totalTime = 0;
  
-    course.courseContent.map((chapter) => chapter.chapterContent.map((topic) => totalTime += topic.duration));
+    course.coursecontent.map((chapter) => chapter.chapterContent.map((topic) => totalTime += topic.lessonduration));
     return humanizeDuration(totalTime*60*1000, {units: ['h', 'm'], round: true});
 }
 
 const calculateNoOfLectures = (course) => {
     let totalLectures = 0;
-    course.courseContent.forEach((chapter) =>
+    course.courseContent.forEach(chapter =>{
     if (Array.isArray(chapter.chapterContent)) {
         totalLectures += chapter.chapterContent.length;
-    })};
+    }});
     return totalLectures;
+}
+
+
+const fetchUserEnrolledCourses = async  ()=>{
+    setEnrolledCourse(dummycourses)
 }
 
 useEffect( () => {
     fetchAllCourses()
+    fetchUserEnrolledCourses()
 },[])
 
 let value={
-    currency,allCourses,navigate,calculateRating,isEducation,setIsEducation
+    currency,allCourses,navigate,calculateRating,isEducation,setIsEducation,calculateChapterTime,calculateCourseDuration,calculateNoOfLectures,fetchUserEnrolledCourses,enrolledCourse
 }
 
     return(

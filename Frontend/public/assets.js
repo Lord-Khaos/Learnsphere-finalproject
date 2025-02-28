@@ -74,7 +74,32 @@ export const dummycourses = [
                     {
                         lessonId: 1,
                         lessonTitle: 'Introduction to the p tag',
-                        lessonduration:16,
+                        lessonduration:10,
+                        lessonorder: 1,
+                        lessonURL: 'https://youtu.be/qis4kAOThLw',
+                        isPreviewfree: true,
+                        lessonContent: 'This lesson introduces the concept of using basic tags like the p tag',
+                    },
+                    {
+                        lessonId: 1,
+                        lessonTitle: 'Introduction to the p tag',
+                        lessonduration:10,
+                        lessonorder: 1,
+                        lessonURL: 'https://example.com/addition.mp4',
+                        isPreviewfree: true,
+                        lessonContent: 'This lesson introduces the concept of using basic tags like the p tag',
+                    }
+                ]
+            },
+            {
+                chapterId: 1,
+                chapterTitle: 'p tag',
+                chapterorder: 1,
+                chapterContent: [
+                    {
+                        lessonId: 1,
+                        lessonTitle: 'Introduction to the p tag',
+                        lessonduration:10,
                         lessonorder: 1,
                         lessonURL: 'https://example.com/addition.mp4',
                         isPreviewfree: true,

@@ -1,0 +1,30 @@
+.educator-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .educator-footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  .educator-footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .educator-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .educator-footer .text-md-end {
+    text-align: right;
+  }
+  
+  .educator-footer .text-center {
+    text-align: center;
+  }
