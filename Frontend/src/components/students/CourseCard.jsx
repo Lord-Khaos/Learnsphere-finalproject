@@ -15,7 +15,7 @@ const CourseCard = ({ course }) => {
 
   return (
     <div>
-      <div className="card" style={{ width: "18rem", border: "2px solid blue", margin: "1rem" }}>
+      <div className="card hover-card" style={{ width: "18rem", margin: "1rem" }}>
         <img src={course.image} className="card-img-top" alt="Course Thumbnail" />
         <div className="card-body" style={{ borderBottom: "1px solid blue" }}>
           <h5 className="card-title">{course.courseTitle}</h5>
@@ -49,7 +49,7 @@ const CourseCard = ({ course }) => {
             Price: {currency}
             {(course.price - (course.discount * course.price) / 100).toFixed(2)}
           </p>
-          <Link to={`/course/${course.id}`} className="btn btn-primary" style={{ width: "100%" }}>
+          <Link to={`/course/${course.id}`} className="btn btn-primary hover-btn" style={{ width: "100%" }}>
             Enroll
           </Link>
         </div>

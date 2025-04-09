@@ -7,6 +7,7 @@ import halfStarIcon from "../../assets/half-star.png"; // Half star icon
 import Footer from "../../components/students/footer";
 import humanizeDuration from "humanized-duration";
 import Youtube from "react-youtube";
+import Navbar from "../../components/students/Navbar.jsx";
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -42,6 +43,8 @@ const CourseDetails = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container mt-5">
       <div className="row">
         {/* Left Column */}
@@ -171,6 +174,7 @@ const CourseDetails = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

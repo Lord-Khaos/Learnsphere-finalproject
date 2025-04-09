@@ -12,8 +12,8 @@ const EducatorFooter = () => {
           </div>
           <div className="col-md-6 text-md-end">
             <h5>Contact Us</h5>
-            <p>Email: support@learnsphere.com</p>
-            <p>Phone: +1 234 567 890</p>
+            <p>Email:Email: makindeoluwatumininu58@gmail.com</p>
+            <p>Phone: +234 9035 4091 80</p>
           </div>
         </div>
         <div className="row mt-3">

@@ -1,6 +1,9 @@
 import Footer from "../../components/students/footer";
+import Navbar from "../../components/students/Navbar.jsx";
 const About = () => {
   return (
+    <>
+    <Navbar />
     <div className="container mt-5">
       <h2 className="text-center mb-4">About Us</h2>
       <p className="text-center">
@@ -13,6 +16,7 @@ const About = () => {
       </p>
       <Footer />
     </div>
+    </>
   );
 };
 

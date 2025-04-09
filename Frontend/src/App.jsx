@@ -10,18 +10,16 @@ import Dashboard from "./pages/educator/Dashboard.jsx";
 import AddCourse from "./pages/educator/AddCourse.jsx";
 import MyCourses from "./pages/educator/MyCourses.jsx";
 import StudentsEnrolled from "./pages/educator/StudentsEnrolled.jsx";
-import Navbar from "./components/students/Navbar.jsx";
 import Contact from "./pages/students/Contact.jsx";
 import FAQ from "./pages/students/FAQ.jsx";
 import About from "./pages/students/About.jsx";
 
 const App = () => {
 
-const isEducatorRoute = location.pathname.includes('/educator')
+
 
   return (
     <div>
-      {!isEducatorRoute && <Navbar/> }
  
     <Routes>
       <Route path="/" element={<Home />} />

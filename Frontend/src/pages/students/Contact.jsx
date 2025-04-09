@@ -1,6 +1,9 @@
 import Footer from "../../components/students/footer";
+import Navbar from "../../components/students/Navbar.jsx";
 const Contact = () => {
   return (
+    <>
+    <Navbar />
     <div className="container mt-5">
       <h2 className="text-center mb-4">Contact Us</h2>
       <div className="row justify-content-center">
@@ -24,6 +27,7 @@ const Contact = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 export default Contact

@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import SearchBar from "../../components/students/SearchBar";
 import { useState,useEffect } from "react";
 import Footer from "../../components/students/footer";
+import Navbar from "../../components/students/Navbar.jsx";
 const CourseList = () => {
 
   const {allCourses,navigate} = useContext(AppContext)
@@ -30,6 +31,7 @@ setFilteredCourse(
   },[allCourses,input])
   return (
 <>
+<Navbar />
 <header className="course-header" style={{display: "flex", justifyContent: "space-between"}}>
         <h2 style={{alignSelf:'end',justifySelf:'flex-end'}}>Explore Our Courses</h2>
 

@@ -1,0 +1,106 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .dashboard img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard p {
+    font-size: 1.2em;
+  }
+  
+  .dashboard h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .dashboard ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dashboard li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dashboard li h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .dashboard li p {
+    margin: 5px 0;
+  }
+  .dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    text-align: center; /* Center align text */
+  }
+  
+  .dashboard img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .dashboard img:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+  }
+  
+  .dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1e90ff; /* Dodger blue color */
+  }
+  
+  .dashboard p {
+    font-size: 1.2em;
+  }
+  
+  .dashboard h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #4682b4; /* Steel blue color */
+  }
+  
+  .dashboard ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dashboard li {
+    background: #e6f7ff; /* Light blue background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .dashboard li:hover {
+    transform: scale(1.05); /* Enlarge list item on hover */
+  }
+  
+  .dashboard li h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #1e90ff; /* Dodger blue color */
+  }
+  
+  .dashboard li p {
+    margin: 5px 0;
+  }

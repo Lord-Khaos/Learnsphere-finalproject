@@ -1,7 +1,9 @@
 import Footer from "../../components/students/footer";
-
+import Navbar from "../../components/students/Navbar.jsx";
 const FAQ = () => {
   return (
+    <>
+    < Navbar ></Navbar>
     <div className="container mt-5">
     <h2 className="text-center mb-4">Frequently Asked Questions</h2>
     <div className="accordion" id="faqAccordion">
@@ -12,7 +14,7 @@ const FAQ = () => {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#faq1"
-          >
+            >
             What is this platform about?
           </button>
         </h2>
@@ -48,7 +50,7 @@ const FAQ = () => {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#faq3"
-          >
+            >
             Is there a refund policy?
           </button>
         </h2>
@@ -61,6 +63,7 @@ const FAQ = () => {
     </div>
     <Footer />
   </div>
+            </>
 );
 };
 

@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Line } from 'rc-progress'
 import Footer from '../../components/students/footer'
+import Navbar from "../../components/students/Navbar.jsx";
 
 const MyEnrollments = () => {
   const { enrolledCourse, calculateCourseDuration } = useContext(AppContext);
@@ -19,6 +20,7 @@ const MyEnrollments = () => {
 
   return (
     <div>
+      <Navbar />
       <h1 style={{ fontSize: '40px', fontWeight: 'bold', textAlign: 'center' }}>My Enrollments Page</h1>
 
       <table id="My-courses">

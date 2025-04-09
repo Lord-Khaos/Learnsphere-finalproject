@@ -7,6 +7,7 @@ import Youtube from "react-youtube";
 import Footer from "../../components/students/footer";
 import Rating from "../../components/students/Rating"; // Import the Rating component
 import { dummycourses } from "../../../public/assets"; // Import dummycourses
+import Navbar from "../../components/students/Navbar.jsx";
 
 const Player = () => {
   const { id } = useParams();
@@ -68,6 +69,8 @@ const Player = () => {
   };
 
   return (
+    <>
+    < Navbar />
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-6">
@@ -99,13 +102,13 @@ const Player = () => {
                           <button
                             onClick={() => handleWatchLesson(topic.lessonURL, topic.lessonTitle)}
                             className="btn btn-success btn-sm mt-2"
-                          >
+                            >
                             {completedLessons.has(topic.lessonURL.split("/").pop()) ? "Rewatch" : "Watch Lesson"}
                           </button>
                           <button
                             onClick={() => handleCompleteLesson(topic.lessonURL)}
                             className="btn btn-primary btn-sm mt-2 ml-2"
-                          >
+                            >
                             Mark as Complete
                           </button>
                         </li>
@@ -130,7 +133,7 @@ const Player = () => {
                     playerVars: { autoplay: 1 },
                   }}
                   iframeClassName="position-absolute top-0 start-0 w-100 h-100"
-                />
+                  />
               </div>
               <h3 className="mt-3">{playerData.lessonTitle}</h3>
             </>
@@ -140,6 +143,7 @@ const Player = () => {
       </div>
       <Footer />
     </div>
+          </>
   );
 };
 

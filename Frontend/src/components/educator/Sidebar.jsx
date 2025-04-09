@@ -1,31 +1,43 @@
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import './Sidebar.css'; // Import the CSS file for styling
-import { FaTachometerAlt, FaPlus, FaEdit, FaUser, FaCog } from 'react-icons/fa';
+import { FaTachometerAlt, FaPlus, FaEdit, FaUser,FaBars } from 'react-icons/fa';
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
   const menuItems = [
-    { name: 'Dashboard', path: '/educator-dashboard', icon: FaTachometerAlt },
-    { name: 'Create Course', path: '/create-course', icon: FaPlus },
-    { name: 'Manage Courses', path: '/manage-courses', icon: FaEdit },
-    { name: 'Profile', path: '/educator-profile', icon: FaUser },
-    { name: 'Settings', path: '/educator-settings', icon: FaCog },
+    { name: 'Dashboard', path: '/educator', icon: FaTachometerAlt },
+    { name: 'Create Course', path: '/educator/add-course', icon: FaPlus },
+    { name: 'Manage Courses', path: '/educator/my-courses', icon: FaEdit },
+    { name: 'Students Enrolled', path: '/educator/students-enrolled', icon: FaUser },
+
   ];
 
   return (
-    <div className="sidebar educator-sidebar">
-      <h2 className="sidebar-title">Educator Dashboard</h2>
-      <ul className="sidebar-list">
-        {menuItems.map((item, index) => (
-          <li key={index} className="sidebar-item">
-            <Link to={item.path} className="sidebar-link">
-              <item.icon className="sidebar-icon" />
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <button className="sidebar-toggle" onClick={toggleSidebar}>
+        <FaBars />
+      </button>
+      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
+      <div className={`sidebar educator-sidebar ${isOpen ? 'open' : ''}`}>
+        <h2 className="sidebar-title">Educator Dashboard</h2>
+        <ul className="sidebar-list">
+          {menuItems.map((item, index) => (
+            <li key={index} className="sidebar-item">
+              <Link to={item.path} className="sidebar-link">
+                <item.icon className="sidebar-icon" />
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
